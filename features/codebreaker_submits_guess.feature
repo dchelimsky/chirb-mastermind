@@ -40,3 +40,8 @@ Feature: code-breaker submits guess
     | code    | guess   | mark |
     | r g y c | r w w w | b    |
     | r g y c | w w r w | w    |
+    
+  Scenarios: duplicates in guess
+    | code    | guess   | mark |
+    | r g y c | r g y y | bbb  |
+    | r g y c | r g g y | bbw  |

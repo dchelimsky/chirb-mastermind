@@ -43,10 +43,10 @@ module Mastermind
       end
       
       context "with two colors in the right spot, one of those in the wrong spot" do
-        it "marks the guess bb" do
-          @messenger.should_receive(:puts).with('bb')
+        it "marks the guess bbb" do
+          @messenger.should_receive(:puts).with('bbb')
           @game.start(%w[r g y c])
-          @game.guess(%w[r g g b])
+          @game.guess(%w[r g y y])
         end
       end
       
