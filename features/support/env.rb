@@ -1,4 +1,6 @@
 $: << File.join(File.dirname(__FILE__), "/../../lib")
-require 'rubygems'
-require 'spec/expectations'
-require 'mastermind'
+#require 'rubygems'
+#require 'spec/expectations'
+#require 'mastermind'
+#
+#
