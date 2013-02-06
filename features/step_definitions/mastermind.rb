@@ -7,7 +7,7 @@ end
 
 Given /^the secret code is (. . . .)$/ do |code|
   @messenger = StringIO.new
-  @game = Mastermind::Game.new(@messenger)
+  @game = Game.new(@messenger)
   @game.start(code.split)
 end
 
@@ -17,13 +17,13 @@ end
 
 When /^I start a new game$/ do
   @messenger = StringIO.new
-  game = Mastermind::Game.new(@messenger)
+  game = Game.new(@messenger)
   game.start
 end
 
 When /^I break the code on on the (\d+.*) guess$/ do |guess_count|
   @messenger = StringIO.new
-  game = Mastermind::Game.new(@messenger)
+  game = Game.new(@messenger)
   game.start(%w[r g y c])
   (guess_count.to_i - 1).times do
     game.guess(%w[r g y b])
